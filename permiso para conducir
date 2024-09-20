@@ -1,0 +1,20 @@
+def puede_conducir(edad, tiene_licencia):
+    
+    edad_minima = 18  
+    return edad >= edad_minima and tiene_licencia
+
+def main():
+    print("Determinar si una Persona puede Conducir")
+
+    edad = int(input("Ingresar la edad de la persona: "))
+    tiene_licencia = input("¿La persona tiene licencia? (si/no): ")
+    tiene_licencia = tiene_licencia.lower() == 'si'
+
+    if puede_conducir(edad, tiene_licencia):
+        print(f"La persona de {edad} años puede conducir")
+    else:
+        print(f"La persona de {edad} años NO puede conducir")
+
+
+if __name__ == "__main__":
+    main()
